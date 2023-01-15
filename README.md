@@ -6,10 +6,6 @@
 
 ✨ Forked from [OpenSumi Docs](https://github.com/opensumi/docs).
 
-[![CI](https://github.com/opensumi/docs/actions/workflows/documentation.yml/badge.svg)](https://github.com/opensumi/docs/actions/workflows/documentation.yml)
-
-</div>
-
 This website is built using [gatsbyjs](https://www.gatsbyjs.com/), a modern static website generator.
 
 ## Installation
