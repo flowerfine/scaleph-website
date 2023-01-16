@@ -1,14 +1,14 @@
 {
-  "name": "opensumi-doc",
+  "name": "scaleph-docs",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/opensumi/docs"
+    "url": "https://github.com/flowerfine/scaleph-website"
   },
   "bugs": {
-    "url": "https://github.com/opensumi/docs/issues"
+    "url": "https://github.com/flowerfine/scaleph-website/issues"
   },
   "scripts": {
     "start": "npm run develop",

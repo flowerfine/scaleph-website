@@ -1,6 +1,6 @@
-window.react = require('react');
-window.reactDom = require('react-dom');
-const React = require('react');
+window.react = require("react");
+window.reactDom = require("react-dom");
+const React = require("react");
 
 exports.wrapPageElement = ({ element, props }) => {
   return React.cloneElement(element, {
@@ -10,6 +10,6 @@ exports.wrapPageElement = ({ element, props }) => {
     footerProps: {
       bottom: `Copyright © 2019-present Alibaba Group Holding Limited, Ant Group Co. Ltd.`
     },
-    showCopyRight: true
+    showCopyRight: false
   });
 };
