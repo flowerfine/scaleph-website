@@ -30,10 +30,10 @@ module.exports = {
     docsUrl: "https://github.com/flowerfine/scaleph-website",
     navs: [
       {
-        slug: "docs/integrate/overview",
+        slug: "docs/guide/overview",
         title: {
-          en: "Documentation",
-          zh: "集成文档"
+          en: "Overview",
+          zh: "概览"
         }
       },
       {
