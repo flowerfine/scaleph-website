@@ -17,11 +17,11 @@ order: 1
 
 用户需自行下载 1.13.6 版本的 [Flink Release](https://archive.apache.org/dist/flink/flink-1.13.6/)，下载完成后在 `资源 -> Flink Release` 上传：
 
-![upload_flink](https://github.com/flowerfine/scaleph-website/blob/main/site/images/guide/quick-start/initialize/upload_flink.png)
+![upload_flink](../../../site/images/guide/quick-start/initialize/upload_flink.png)
 
 上传完成后页面如下：
 
-![flink_release_list](https://github.com/flowerfine/scaleph-website/blob/main/site/images/guide/quick-start/initialize/flink_release_list.png)
+![flink_release_list](../../../site/images/guide/quick-start/initialize/flink_release_list.png)
 
 ### SeaTunnel Release
 
