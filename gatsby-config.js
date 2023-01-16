@@ -37,6 +37,13 @@ module.exports = {
         }
       },
       {
+        slug: "docs/contribute/develop",
+        title: {
+          en: "Develop",
+          zh: "开发文档"
+        }
+      },
+      {
         slug: "docs/develop/how-to-contribute",
         title: {
           en: "Development",
@@ -53,12 +60,12 @@ module.exports = {
     ],
     docs: [
       {
-        slug: "integrate/quick-start",
+        slug: "guide/quick-start",
         title: {
           zh: "快速开始",
           en: "Quick Start"
         },
-        order: 1
+        order: 3
       },
       {
         slug: "integrate/universal-integrate-case",

@@ -2,7 +2,7 @@
 id: compile
 title: 编译
 slug: compile
-order: 3
+order: 4
 ---
 
 不同的编译方式和环境可能会获得不同的编译结果，甚至会编译失败！`scaleph` 拥有多个编译场景：
