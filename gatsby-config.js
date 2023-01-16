@@ -1,5 +1,6 @@
 require("dotenv").config();
 module.exports = {
+  pathPrefix: "/scaleph-website",
   plugins: [
     {
       resolve: "@opensumi/gatsby-theme",

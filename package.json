@@ -14,6 +14,7 @@
     "start": "npm run develop",
     "develop": "gatsby develop -H 0.0.0.0 --open",
     "build": "gatsby build --prefix-paths",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
