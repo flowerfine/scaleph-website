@@ -5,7 +5,7 @@ slug: job_seatunnel
 order: 3
 ---
 
-SeaTunnel 作为新一代的数据集成引擎，同时支持 Flink、Spark 和自研 Zeta 引擎。`scaleph` 只单独支持了 Flink 引擎，提供了 web 页面拖拉拽的任务创建方式，帮助用户可视化地使用 SeaTunnel 进行数据同步。
+`scaleph` 提供了 web 页面拖拉拽的任务创建方式，帮助用户可视化地使用 SeaTunnel 进行数据同步。
 
 ## SeaTunnel 任务创建
 
@@ -61,3 +61,15 @@ SeaTunnel 配置文件使用 [config](https://github.com/lightbend/config) 库�
 config 库易于读取解析 HOCON 配置，但是不易生成。`scaleph` 使用 Jackson 生成 JSON 格式的配置文件。
 
 用户完全可以自行复制保存 `【预览】` 功能的配置文件，保存为 xxxx.json 文件，使用 SeaTunnel 提供的 `start-seatunnel-flink-connector-v2.sh` 脚本提交、运行任务。同时在使用 `scaleph` 遇到任务无法提交、正常运行时也可采用此种方式，定位问题是 SeaTunnel 引擎还是 `scaleph` 系统。
+
+### 启动任务
+
+SeaTunnel 作为新一代的数据集成引擎，同时支持 Flink、Spark 和自研 Zeta 引擎。`scaleph` 只单独支持了 Flink 引擎，将 SeaTunnel 任务作为 Flink Jar 形式的任务提交到 Standalone、YARN 或 Kubernetes。
+
+通过 `作业管理 -> 作业列表 -> 【创建作业】按钮` 新建作业：
+
+![job_create](../../../site/images/guide/quick-start/job/job_create.png)
+
+选择 `SeaTunnel` 作业：
+
+![job_create_seatunnel](../../../site/images/guide/quick-start/job/seatunnel/job_create_seatunnel.png)
