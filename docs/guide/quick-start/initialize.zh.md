@@ -1,6 +1,6 @@
 ---
 id: initialize
-title: 系统初始化
+title: 初始化系统
 slug: initialize
 order: 1
 ---
