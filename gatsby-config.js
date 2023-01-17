@@ -45,19 +45,20 @@ module.exports = {
         }
       },
       {
-        slug: "docs/develop/how-to-contribute",
+        slug: "docs/design/design",
         title: {
-          en: "Development",
-          zh: "开发文档"
+          en: "Design",
+          zh: "功能设计"
         }
-      },
+      }
+      /*
       {
         slug: "https://marketplace.opentrs.cn/square",
         title: {
           en: "Marketplace",
           zh: "插件市场"
         }
-      }
+      }*/
     ],
     docs: [
       {
@@ -69,52 +70,12 @@ module.exports = {
         order: 3
       },
       {
-        slug: "integrate/universal-integrate-case",
+        slug: "design/storage",
         title: {
-          zh: "常见集成场景",
-          en: "Integrate Case"
-        },
-        order: 2
-      },
-      {
-        slug: "integrate/module-usage",
-        title: {
-          zh: "模块使用",
-          en: "Module Usage"
+          zh: "存储功能",
+          en: "Storage"
         },
         order: 3
-      },
-      {
-        slug: "integrate/browser-extension",
-        title: {
-          zh: "浏览器插件",
-          en: "Browser Extension"
-        },
-        order: 4
-      },
-      {
-        slug: "develop/basic-design",
-        title: {
-          zh: "基础设计",
-          en: "Basic Design"
-        },
-        order: 4
-      },
-      {
-        slug: "develop/module-apis",
-        title: {
-          zh: "模块 API",
-          en: "Modules API"
-        },
-        order: 5
-      },
-      {
-        slug: "develop/sample",
-        title: {
-          zh: "经典案例",
-          en: "Sample"
-        },
-        order: 6
       }
     ],
     showDingTalkQRCode: false,
