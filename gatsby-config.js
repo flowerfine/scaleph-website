@@ -76,6 +76,14 @@ module.exports = {
           en: "Storage"
         },
         order: 3
+      },
+      {
+        slug: "design/kubernetes",
+        title: {
+          zh: "Flink Kubernetes",
+          en: "Flink Kubernetes"
+        },
+        order: 5
       }
     ],
     showDingTalkQRCode: false,
