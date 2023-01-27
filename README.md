@@ -4,6 +4,9 @@
 # Scaleph Documentation Website
 
 ✨ Forked from [OpenSumi Docs](https://github.com/opensumi/docs).
+
+[![CI](https://github.com/flowerfine/scaleph-website/actions/workflows/ci.yml/badge.svg)](https://github.com/flowerfine/scaleph-website/actions/workflows/ci.yml)
+
 </div>
 
 This website is built using [gatsbyjs](https://www.gatsbyjs.com/), a modern static website generator.
