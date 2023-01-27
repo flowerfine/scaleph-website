@@ -2,9 +2,7 @@ name: Release
 
 on:
   push:
-    branches: [ main ]
-  schedule:
-    - cron: '0 20 * * *' # automatic test while every day on 04:00 am at UTC+10
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -19,7 +17,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-#       gatsby actions 提供的依赖安装功能不靠谱，进行预先安装
+      #       gatsby actions 提供的依赖安装功能不靠谱，进行预先安装
       - name: build
         run: |
           yarn
