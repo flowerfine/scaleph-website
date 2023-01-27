@@ -1,10 +1,7 @@
 <div align="center">
-
-
-
 # Scaleph Documentation Website
-
 ✨ Forked from [OpenSumi Docs](https://github.com/opensumi/docs).
+</div>
 
 This website is built using [gatsbyjs](https://www.gatsbyjs.com/), a modern static website generator.
 
