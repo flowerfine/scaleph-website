@@ -24,8 +24,8 @@ jobs:
       - name: gatsby publish
         uses: enriikke/gatsby-gh-pages-action@v2.2.0
         with:
-          access-token: ${{ secrets.GATSBY_ACCESS_TOKEN }}
+          access-token: x-access-token:${{ secrets.GATSBY_ACCESS_TOKEN }}
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
-          git-config-name: 1942460489@qq.com
+          git-config-name: kalencaya
           git-config-email: 1942460489@qq.com
