@@ -26,5 +26,6 @@ jobs:
         with:
           access-token: ${{ secrets.GATSBY_ACCESS_TOKEN }}
           deploy-branch: gh-pages
+          gatsby-args: --prefix-paths
           git-config-name: kalencaya
           git-config-email: 1942460489@qq.com
