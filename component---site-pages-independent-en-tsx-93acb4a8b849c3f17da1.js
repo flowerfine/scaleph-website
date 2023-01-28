@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkscaleph_docs=self.webpackChunkscaleph_docs||[]).push([[145,155],{7015:function(e,t,a){a.r(t);var n=a(4840);t.default=n.default},4840:function(e,t,a){a.r(t);var n=a(7294),u=a(8900),c=function(){var e=(0,u.$)().t;return n.createElement(n.Fragment,null,e("独立页面"))};c.noLayout=!0,t.default=c}}]);
