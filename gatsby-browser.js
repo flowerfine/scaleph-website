@@ -8,7 +8,7 @@ exports.wrapPageElement = ({ element, props }) => {
     ...element.props,
     // https://github.com/react-component/footer#api
     footerProps: {
-      bottom: `Copyright © 2019-present Alibaba Group Holding Limited, Ant Group Co. Ltd.`
+      bottom: `Scaleph`
     },
     showCopyRight: false
   });
