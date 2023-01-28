@@ -156,17 +156,19 @@ const IndexPage = () => {
         coverImage={<BannerSVG />}
         logoUrl={logoUrl}
         title={t("Scaleph")}
-        description={t("一款帮助你快速搭建本地和云端 IDE 的框架。")}
+        description={t(
+          "基于 Flink 和 Kubernetes 打造的开放数据平台，具备 Flink 和 SeaTunnel 任务管理能力。"
+        )}
         className="banner"
         buttons={bannerButtons}
       />
-      <Cases cases={cases} />
-      <Features title={t("能力特性")} features={features} />
-      <Companies
-        title={t("合作公司")}
-        companies={companies}
-        addMoreLink="https://github.com/opensumi/docs/edit/main/site/pages/index.zh.tsx#L56"
-      />
+      {/*<Cases cases={cases} />*/}
+      {/*<Features title={t("能力特性")} features={features} />*/}
+      {/*<Companies*/}
+      {/*  title={t("合作公司")}*/}
+      {/*  companies={companies}*/}
+      {/*  addMoreLink="https://github.com/opensumi/docs/edit/main/site/pages/index.zh.tsx#L56"*/}
+      {/*/>*/}
     </>
   );
 };
