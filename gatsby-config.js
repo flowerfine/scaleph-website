@@ -22,11 +22,11 @@ module.exports = {
     siteUrl: "https://flowerfine.github.io/scaleph/",
     logo: {
       img:
-        "https://github.com/flowerfine/scaleph/blob/dev/scaleph-ui-react/public/scaleph.svghttps://github.com/flowerfine/scaleph/blob/dev/scaleph-ui-react/public/scaleph.svg",
+        "https://github.com/flowerfine/scaleph/raw/e9151fec13875881c38fece98588e9dee371575f/scaleph-ui-react/public/scaleph.svg",
       link: "https://flowerfine.github.io/scaleph/"
     },
     logoUrl:
-      "https://github.com/flowerfine/scaleph/blob/dev/scaleph-ui-react/public/scaleph.svg",
+      "https://github.com/flowerfine/scaleph/raw/e9151fec13875881c38fece98588e9dee371575f/scaleph-ui-react/public/scaleph.svg",
     githubUrl: "https://github.com/flowerfine/scaleph",
     docsUrl: "https://github.com/flowerfine/scaleph-website",
     navs: [

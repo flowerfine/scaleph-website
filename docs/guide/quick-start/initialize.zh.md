@@ -17,25 +17,25 @@ order: 1
 
 用户需自行下载 1.13.6 版本的 [Flink Release](https://archive.apache.org/dist/flink/flink-1.13.6/)，下载完成后在 `资源 -> Flink Release` 上传：
 
-![upload_flink](../../../site/images/guide/quick-start/initialize/upload_flink.png)
+![upload_flink](https://github.com/flowerfine/scaleph-website/raw/6f3243aff46ddb50b6a76b2ff608958fe3896681/site/images/guide/quick-start/initialize/upload_flink.png)
 
 上传完成后页面如下：
 
-![flink_release_list](../../../site/images/guide/quick-start/initialize/flink_release_list.png)
+![flink_release_list](https://github.com/flowerfine/scaleph-website/raw/6f3243aff46ddb50b6a76b2ff608958fe3896681/site/images/guide/quick-start/initialize/flink_release_list.png)
 
 ### SeaTunnel Release
 
 用户需自行下载 2.3.0 版本的 [SeaTunnel Release](https://seatunnel.apache.org/download/)，下载完成后在 `资源 -> SeaTunnel Release` 上传：
 
-![upload_seatunnel](../../../site/images/guide/quick-start/initialize/upload_seatunnel.png)
+![upload_seatunnel](https://github.com/flowerfine/scaleph-website/raw/6f3243aff46ddb50b6a76b2ff608958fe3896681/site/images/guide/quick-start/initialize/upload_seatunnel.png)
 
 上传完成后页面如下：
 
-![seatunnel_release_list](../../../site/images/guide/quick-start/initialize/seatunnel_release_list.png)
+![seatunnel_release_list](https://github.com/flowerfine/scaleph-website/raw/6f3243aff46ddb50b6a76b2ff608958fe3896681/site/images/guide/quick-start/initialize/seatunnel_release_list.png)
 
 因为 SeaTunnel Release 中不在包含 connector jar，需用户自行[下载](https://repo1.maven.org/maven2/org/apache/seatunnel/)并上传 v2 connector jars 至 `scaleph` 中，详情参阅 [Step 3: Install connectors plugin](https://seatunnel.apache.org/docs/2.3.0/start-v2/locally/deployment#step-3-install-connectors-plugin)。
 
-![seatunnel_connectors](../../../site/images/guide/quick-start/initialize/seatunnel_connectors.png)
+![seatunnel_connectors](https://github.com/flowerfine/scaleph-website/raw/6f3243aff46ddb50b6a76b2ff608958fe3896681/site/images/guide/quick-start/initialize/seatunnel_connectors.png)
 
 注意：SeaTunnel v2 connectors 众多，用户可选择业务需要的 connector 下载上传即可，无需全部上传。
 
@@ -57,4 +57,4 @@ order: 1
 
 应用部署好后，需启动 `scaleph` 系统调度任务：
 
-![schedule_system_job](../../../site/images/guide/quick-start/initialize/schedule_system_job.png)
+![schedule_system_job](https://github.com/flowerfine/scaleph-website/raw/6f3243aff46ddb50b6a76b2ff608958fe3896681/site/images/guide/quick-start/initialize/schedule_system_job.png)
