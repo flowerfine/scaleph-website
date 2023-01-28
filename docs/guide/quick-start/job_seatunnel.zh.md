@@ -20,25 +20,25 @@ order: 3
 
 在 `数据源 -> 【新增】按钮` 选择数据源：
 
-![datasource_new](../../../site/images/guide/quick-start/job/datasource_new.png)
+![datasource_new](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/job/datasource_new.png)
 
 输入数据源信息：
 
-![datasource_new_props](../../../site/images/guide/quick-start/job/datasource_new_props.png)
+![datasource_new_props](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/job/datasource_new_props.png)
 
 点击 `【提交】按钮`，查看数据源：
 
-![datasource_list](../../../site/images/guide/quick-start/job/datasource_list.png)
+![datasource_list](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/job/datasource_list.png)
 
 ### SeaTunnel
 
 数据源创建完成后，即可在 `作业管理 -> SeaTunnel` 拖拉拽创建 SeaTunnel 任务：
 
-![job_seatunnel_new](../../../site/images/guide/quick-start/job/seatunnel/job_seatunnel_new.png)
+![job_seatunnel_new](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/job/seatunnel/job_seatunnel_new.png)
 
 点击 `【新增】按钮` 即可进入 DAG 页面：
 
-![job_seatunnel_dag](../../../site/images/guide/quick-start/job/seatunnel/job_seatunnel_dag.png)
+![job_seatunnel_dag](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/job/seatunnel/job_seatunnel_dag.png)
 
 DAG 页面布局如下：
 
@@ -50,11 +50,11 @@ DAG 页面布局如下：
 
 从 `左侧侧边栏` 拖过一个 connector，双击即可编辑配置：
 
-![job_seatunnel_dag_connector](../../../site/images/guide/quick-start/job/seatunnel/job_seatunnel_dag_connector.png)
+![job_seatunnel_dag_connector](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/job/seatunnel/job_seatunnel_dag_connector.png)
 
 当任务配置完成后，可以点击 `上方工具栏 -> 【保存】按钮和【预览】按钮` 进行配置保存和预览：
 
-![job_seatunnel_dag_preview](../../../site/images/guide/quick-start/job/seatunnel/job_seatunnel_dag_preview.png)
+![job_seatunnel_dag_preview](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/job/seatunnel/job_seatunnel_dag_preview.png)
 
 SeaTunnel 配置文件使用 [config](https://github.com/lightbend/config) 库解析，配置语法为 [HOCON](https://github.com/lightbend/config/blob/main/HOCON.md)，SeaTunnel 为进一步提高配置文件可读性做了进一步的修改，但是配置文件是与 JSON 语法完全兼容的。
 
@@ -68,8 +68,8 @@ SeaTunnel 作为新一代的数据集成引擎，同时支持 Flink、Spark 和�
 
 通过 `作业管理 -> 作业列表 -> 【创建作业】按钮` 新建作业：
 
-![job_create](../../../site/images/guide/quick-start/job/job_create.png)
+![job_create](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/job/job_create.png)
 
 选择 `SeaTunnel` 作业：
 
-![job_create_seatunnel](../../../site/images/guide/quick-start/job/seatunnel/job_create_seatunnel.png)
+![job_create_seatunnel](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/job/seatunnel/job_create_seatunnel.png)

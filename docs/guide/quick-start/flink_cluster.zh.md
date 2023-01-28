@@ -49,16 +49,16 @@ Flink 支持与 YARN、Kubernetes 资源调度系统集成，实现资源的动�
 
 集群配置模板位于项目内，用户需提前创建项目：
 
-![create_project](../../../site/images/guide/quick-start/cluster/create_project.png)
+![create_project](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/cluster/create_project.png)
 
 在`集群管理 -> 集群配置` 创建集群配置模板：
 
-![cluster_config_01](../../../site/images/guide/quick-start/cluster/cluster_config_01.png)
+![cluster_config_01](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/cluster/cluster_config_01.png)
 
-![cluster_config_02](../../../site/images/guide/quick-start/cluster/cluster_config_02.png)
+![cluster_config_02](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/cluster/cluster_config_02.png)
 
 如果集群模板选择了 Session 类型，则需进一步在 `集群管理 -> 集群实例` 创建模板对应的 Session 集群：
 
-![cluster_instance_01](../../../site/images/guide/quick-start/cluster/cluster_instance_01.png)
+![cluster_instance_01](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/cluster/cluster_instance_01.png)
 
-![cluster_instance_02](../../../site/images/guide/quick-start/cluster/cluster_instance_02.png)
+![cluster_instance_02](https://github.com/flowerfine/scaleph-website/raw/2a943f478234dadae2748d478ef29d5f81e34a2e/site/images/guide/quick-start/cluster/cluster_instance_02.png)
