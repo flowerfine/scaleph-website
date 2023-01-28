@@ -140,12 +140,12 @@ const IndexPage = () => {
   const bannerButtons = [
     {
       text: t("快速开始"),
-      link: "./docs/integrate/quick-start/web",
+      link: "./docs/guide/quick-start/initialize",
       type: "primary"
     },
     {
       text: t("概览"),
-      link: `/${i18n.language}/docs/integrate/overview`
+      link: `/${i18n.language}/docs/guide/overview`
     }
   ];
 
