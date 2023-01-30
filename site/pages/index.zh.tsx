@@ -1,10 +1,10 @@
 import React from "react";
-import SEO from "@opensumi/gatsby-theme/site/components/Seo";
-import Banner from "@opensumi/gatsby-theme/site/components/Banner";
-import Features from "@opensumi/gatsby-theme/site/components/Features";
-import Companies from "@opensumi/gatsby-theme/site/components/Companies";
-import Cases from "@opensumi/gatsby-theme/site/components/Cases";
-import BannerSVG from "@opensumi/gatsby-theme/site/components/BannerSVG";
+import SEO from "@scaleph/scaleph-gatsby-theme/site/components/Seo";
+import Banner from "@scaleph/scaleph-gatsby-theme/site/components/Banner";
+import Features from "@scaleph/scaleph-gatsby-theme/site/components/Features";
+import Companies from "@scaleph/scaleph-gatsby-theme/site/components/Companies";
+import Cases from "@scaleph/scaleph-gatsby-theme/site/components/Cases";
+import BannerSVG from "@scaleph/scaleph-gatsby-theme/site/components/BannerSVG";
 import { useStaticQuery, graphql } from "gatsby";
 import { useTranslation } from "react-i18next";
 

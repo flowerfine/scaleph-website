@@ -3,7 +3,7 @@ module.exports = {
   pathPrefix: "/scaleph-website",
   plugins: [
     {
-      resolve: "@opensumi/gatsby-theme",
+      resolve: "@scaleph/scaleph-gatsby-theme",
       options: {
         // GATrackingId: 'G-63DR4G0WD7',
         theme: {
