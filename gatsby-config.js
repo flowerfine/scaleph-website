@@ -50,6 +50,13 @@ module.exports = {
           en: "Design",
           zh: "功能设计"
         }
+      },
+      {
+        slug: "docs/roadmap/roadmap",
+        title: {
+          en: "Roadmap",
+          zh: "路线图"
+        }
       }
       /*
       {
