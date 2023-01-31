@@ -38,13 +38,6 @@ module.exports = {
         }
       },
       {
-        slug: "docs/contribute/develop",
-        title: {
-          en: "Develop",
-          zh: "开发文档"
-        }
-      },
-      {
         slug: "docs/design/design",
         title: {
           en: "Design",
@@ -56,6 +49,20 @@ module.exports = {
         title: {
           en: "Roadmap",
           zh: "路线图"
+        }
+      },
+      {
+        slug: "docs/contribute/contribute",
+        title: {
+          en: "Contribute",
+          zh: "参与贡献"
+        }
+      },
+      {
+        slug: "docs/faq/faq",
+        title: {
+          en: "FAQ",
+          zh: "FAQ"
         }
       }
       /*
