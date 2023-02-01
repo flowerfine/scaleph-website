@@ -52,7 +52,7 @@ module.exports = {
         }
       },
       {
-        slug: "docs/contribute/contribute",
+        slug: "docs/contribute/develop",
         title: {
           en: "Contribute",
           zh: "参与贡献"
