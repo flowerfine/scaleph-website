@@ -52,6 +52,20 @@ cd scaleph/tools/docker/local
 docker compose up -d
 ```
 
+依赖启动后，服务信息如下：
+
+- mysql。
+  - host: localhost:3306
+  - user: root
+  - password: 123456
+- redis。
+  - host: localhost:6379
+  - password: 123456
+- minio。
+  - host: http://127.0.0.1:9001
+  - username: admin
+  - password: password
+
 ## 启动 scaleph-api
 
 `scaleph` 服务端启动类为 `cn.sliew.scaleph.Application`，位于 `scaleph-api` 模块。

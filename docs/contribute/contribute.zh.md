@@ -1,6 +1,6 @@
 ---
 id: contribute
-title: 如何参与
+title: 如何贡献
 slug: contribute
 order: 5
 ---
