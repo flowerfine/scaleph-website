@@ -2,7 +2,7 @@
 id: contribute
 title: 如何参与
 slug: contribute
-order: 3
+order: 5
 ---
 
 ## 代码规范

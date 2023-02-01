@@ -55,7 +55,7 @@ scaleph
 │   ├── scaleph-generator                                # 代码生成模块。生成 mybatis-plus 的 entity、mapper、xml
 │   ├── scaleph-log                                      # 日志模块，存储用户登录、操作日志，站内信，调度日志等
 │   ├── scaleph-mail                                     # 邮箱模块。如发送用户激活邮件
-│   ├── scaleph-privilege                                # 系统权限模块。主要用于插件安全，如防止插件调用 `System.exit()` 导致系统退出
+│   ├── scaleph-privilege                                # 系统权限模块。防止插件调用 `System.exit()` 导致 JVM 退出
 │   ├── scaleph-storage                                  # 存储模块。基于 HDFS 文件系统实现
 │   └── scaleph-system                                   # 系统模块。配置、字典等
 ├── scaleph-ui                                           # 基于 angular 开发的 ui，暂未启用
