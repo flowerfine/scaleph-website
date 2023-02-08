@@ -98,14 +98,6 @@ module.exports = {
           en: "Flink Kubernetes"
         },
         order: 5
-      },
-      {
-        slug: "design/version",
-        title: {
-          zh: "版本管理",
-          en: "版本管理"
-        },
-        order: 5
       }
     ],
     showDingTalkQRCode: false,
