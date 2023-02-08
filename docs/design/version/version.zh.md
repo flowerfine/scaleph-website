@@ -42,18 +42,46 @@ order: 1
 
 ## gitops
 
-Kubernetes 作为最流行的开源项目之一，它本身的功能设计和实现值得开发者学习和借鉴。
-
-Kubernetes 管理数以千计的节点，抽象底层基础设施，
-
-通过 Kubernetes 用户可以方便地部署和管理容器化的应用
+Kubernetes 由谷歌开源的容器管理系统，管理数以千计的节点，抽象底层基础设施，提供资源调度、部署运行、服务发现、扩缩容等，通过 Kubernetes 用户可以方便地部署和管理容器化的应用。
 
 ### Kubernetes 声明式配置
 
-apiVersion，Kind，metadata，spec，status
+Kubernetes 对象管理支持 3 种模式：
 
-yaml，json 配置文件
+- 指令式命令
+- 指令式对象配置
+- 声明式对象配置
 
-k8s 的选择器。注解，标签
+在声明式配置中，我们使用 YAML 来定义系统的终极状态，声明系统应该是什么样的，Kubernetes 自动化地根据 YAML 文件将集群推进到描述的状态。
 
-版本化
+在做自动化部署时，用户只需调整 YAML，Kubernetes 会处理现有对象的更新，匹配最新的状态。
+
+### Kubernetes 资源
+
+Kubernetes 中一切皆资源，一切皆对象。资源都可以通过 REST API 提交 JSON 或 YAML 格式文件创建，查看 Kubernetes 中的资源也都可以指定以 JSON 或 YAML 格式显示。
+
+不同类型的资源具有各种属性，每个资源对象都有自己的特定结构，统一保存在 etcd 非关系型数据库中，实现高速读写。
+
+资源对象一般都包含几个通用属性，专有的属性也会遵守特定的命名：
+
+- 版本和资源类型。对应 `apiVersion` 和 `Kind`
+- 元数据。对应 `metadata`，可以添加 name、namespace、annotations 和 labels
+- spec。资源自定义
+- status。资源自定义
+
+spec 和 status 并非一定存在，也可以有其他属性比如 state，template 等等
+
+### 版本化
+
+声明性 YAML 文件可以直接使用代码版本管理系统进行版本控制，组织配置变更流程如提交、review、合并和回滚。
+
+### 选择器
+
+label（标签）是 Kubernetes 中的一个核心概念：
+
+- 标签是 kv 结构，key 和 value 都由用户自己定义
+- 标签可以被附加到各种资源对象上
+- 资源对象可以被添加任意数量的标签
+- 标签可以在资源对象创建时添加，也可以在创建后添加或删除
+
+通过标签选择器，用户能方便地筛选出一组资源对象。
