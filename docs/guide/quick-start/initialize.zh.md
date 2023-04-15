@@ -47,7 +47,7 @@ order: 1
 
 `scaleph` 支持如下三种集群：
 
-- Standalone。Flink 任务提交时需获取 JobManager 的 `jobmanager.rpc.address` 和 `jobmanager.rpc.port` 配置连接 Standalone 集群，而 Standalone 集群的 `flink-cconf.yaml` 文件中包含此配置项。
+- Standalone。Flink 任务提交时需获取 JobManager 的 `jobmanager.rpc.address` 和 `jobmanager.rpc.port` 配置连接 Standalone 集群，而 Standalone 集群的 `flink-conf.yaml` 文件中包含此配置项。
 - YARN。用户上传的 Hadoop 集群配置必须包含 `core-site.xml` 和 `hdfs-site.xml` 文件，其余的 Hadoop 配置也需要一起上传，不是只上传 2 个。
 - Kubernetes。上传 kubeconfig 文件，一般为 `$HOME/.kube/config`。
 
