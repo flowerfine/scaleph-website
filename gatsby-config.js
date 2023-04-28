@@ -59,6 +59,13 @@ module.exports = {
         }
       },
       {
+        slug: "docs/blog/tree",
+        title: {
+          en: "Blog",
+          zh: "博客"
+        }
+      },
+      {
         slug: "docs/faq/faq",
         title: {
           en: "FAQ",
