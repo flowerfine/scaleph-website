@@ -13,12 +13,6 @@ module.exports = {
         cname: false,
         codeSplit: true
       }
-    },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        failOnError: false,
-      },
     }
   ],
   siteMetadata: {
