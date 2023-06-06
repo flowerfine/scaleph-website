@@ -103,3 +103,18 @@ docker compose -f docker-compose-build-ui.yml build
 # 测试 scaleph-ui-react 镜像编译结果
 docker compose -f docker-compose-build-ui.yml up -d
 ```
+
+### 安装包编译
+
+请先参照前文安装本地编译环境。
+
+```shell
+# clone 源码
+git clone https://github.com/flowerfine/scaleph.git
+cd scaleph
+
+# 开始编译
+mvn -U -B -T 4 clean package -Pdist -DskipTests -Dfast
+```
+
+编译完成后在`scaleph-dist/target`下生成后缀为`.tar.gz`的安装包。
