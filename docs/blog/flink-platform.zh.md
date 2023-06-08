@@ -28,3 +28,5 @@ order: 3
 - [网易游戏 Flink SQL 平台化实践](https://zhuanlan.zhihu.com/p/543906111)
 - [蚂蚁实时计算团队的 Flink 提交攻坚之路](https://zhuanlan.zhihu.com/p/599654535)
 - [Flink on K8S 在网易传媒的落地实践](https://mp.weixin.qq.com/s/nbKz1aAZChTPGFMp80ERNA)
+- [揭秘阿里云 Flink 智能诊断利器——Fllink Job Advisor](https://mp.weixin.qq.com/s/OqqRG0yjfIwoJU-SjaFQHA)
+- [Ververica Platform-阿里巴巴全新 Flink 企业版揭秘](https://zhuanlan.zhihu.com/p/89616731)

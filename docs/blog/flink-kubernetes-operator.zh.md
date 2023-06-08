@@ -39,7 +39,7 @@ Flink Kubernetes Operator 使用 Kubernetes API，提供云原生管理 Flink �
    kubectl create -f https://github.com/jetstack/cert-manager/releases/download/v1.8.2/cert-manager.yaml
 
    helm repo add flink-operator-repo https://downloads.apache.org/flink/flink-kubernetes-operator-1.5.0/
-   helm install flink-kubernetes-operator flink-operator-repo/flink-kubernetes-operator
+   helm install flink-kubernetes-operator flink-operator-repo/flink-kubernetes-operator --set image.repository=apache/flink-kubernetes-operator
 
    # 查看安装状态
    kubectl get deployment
