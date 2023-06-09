@@ -29,6 +29,30 @@ flink-kubernetes-operator 提供了 `FlinkDeployment` CRD 资源，用以提交 
 - savepoint。
 - 资源统计。提供任务的资源总量，消耗量。
 
-## 路线图
+## 核心概念
 
-模板功能。提供表单配置引导用户关注核心配置，提供编辑器配置支持用户自定义配置以及查看最终配置。
+### Artifact
+
+Jar，SQL，SeaTunnel
+
+### Template
+
+作业模板，辅助用户快速创建任务，减少用户在通用配置上耗费的时间和精力。
+
+### Deployment
+
+application 提交方式
+
+### SessionCluster
+
+session cluster 和 session 提交方式
+
+### Job
+
+application 和 session 两种
+
+运行时配置，提前配置。
+
+资源（JobManager，TaskManager），自定义配置（配置优先级）。
+
+JobInstance。
