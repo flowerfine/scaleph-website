@@ -153,7 +153,7 @@ Flink Kubernetes Operator 并不干涉 Flink web ui 的功能，用户在通过 
 
 5. 删除任务。
 
-6. ```yaml
+   ```shell
    kubectl delete -f advanced-ingress.yaml
    ```
 
