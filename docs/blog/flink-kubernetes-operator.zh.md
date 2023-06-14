@@ -78,6 +78,85 @@ Flink Kubernetes Operator 使用 Kubernetes API，提供云原生管理 Flink �
    kubectl delete flinkdeployment/basic-example
    ```
 
+## Ingress
+
+在 Kubernetes 中，外部访问集群内的服务有两种方式：[service](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) 和 [ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)。其中 Flink 的 web ui 对 service 的 3 种类型都进行了支持，[参考链接](https://nightlies.apache.org/flink/flink-docs-release-1.17/docs/deployment/resource-providers/native_kubernetes/#accessing-flinks-web-ui)：
+
+- ClusterIP
+- NodePort
+- LoadBalancer
+
+Flink Kubernetes Operator 并不干涉 Flink web ui 的功能，用户在通过 Flink Kubernetes Operator 部署 Flink 任务的时候，仍然可以使用上述 3 种方式来访问 Flink web ui。但除此之外，Flink Kubernetes Operator 提供 ingress 配置，可以让用户在未配置外部访问的情况下，访问到 Flink web ui。
+
+1. 安装 nginx ingress
+
+   ```shell
+   # 安装 ingress-nginx
+   kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.0/deploy/static/provider/cloud/deploy.yaml
+
+   # 检验安装结果
+   kubectl get pods -n ingress-nginx
+   kubectl get services -n ingress-nginx
+   ```
+
+2. yaml 增加 ingress 配置
+
+   ```yaml
+   apiVersion: flink.apache.org/v1beta1
+   kind: FlinkDeployment
+   metadata:
+     name: advanced-ingress
+   spec:
+     image: flink:1.17
+     flinkVersion: v1_17
+     ingress:
+       template: "/{{namespace}}/{{name}}(/|$)(.*)"
+       className: "nginx"
+       annotations:
+         nginx.ingress.kubernetes.io/rewrite-target: "/$2"
+     flinkConfiguration:
+       taskmanager.numberOfTaskSlots: "2"
+     serviceAccount: flink
+     jobManager:
+       resource:
+         memory: "1024m"
+         cpu: 0.1
+     taskManager:
+       resource:
+         memory: "1024m"
+         cpu: 0.25
+     job:
+       jarURI: local:///opt/flink/examples/streaming/StateMachineExample.jar
+       parallelism: 2
+   ```
+
+3. 部署任务
+
+   ```yaml
+   # 部署任务
+   kubectl apply -f advanced-ingress.yaml
+
+   # 查看任务
+   kubectl get FlinkDeployment
+
+   kubectl get deployment
+
+   kubectl get pods
+
+   kubectl get ingress -A
+   kubectl describe ingress $ingress
+
+   kubectl get services
+   ```
+
+4. 访问任务。https://localhost/default/advanced-ingress/
+
+5. 删除任务。
+
+6. ```yaml
+   kubectl delete -f advanced-ingress.yaml
+   ```
+
 ## CRD
 
 Flink 除了 Standalone，还支持多种资源调度框架如 YARN、Kubernetes。在 Kubernetes 上支持 Application 和 Session 模式。Flink Kubernetes Operator 同时提供在 Kubernetes 上创建 Standalone 集群，以 Application 和 Session 模式原生运行 Flink 的功能。
