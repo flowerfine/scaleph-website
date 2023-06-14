@@ -120,6 +120,80 @@ kubectl port-forward svc/basic-example-rest <span class="token number">8081</spa
 <div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">kubectl delete flinkdeployment/basic-example</code></pre></div>
 </li>
 </ol>
+<h2 id="ingress" style="position:relative"><a href="#ingress" aria-label="ingress permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ingress</h2>
+<p>在 Kubernetes 中，外部访问集群内的服务有两种方式：<a href="https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types" target="_self" rel="nofollow">service</a> 和 <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/" target="_self" rel="nofollow">ingress</a>。其中 Flink 的 web ui 对 service 的 3 种类型都进行了支持，<a href="https://nightlies.apache.org/flink/flink-docs-release-1.17/docs/deployment/resource-providers/native_kubernetes/#accessing-flinks-web-ui" target="_self" rel="nofollow">参考链接</a>：</p>
+<ul>
+<li>ClusterIP</li>
+<li>NodePort</li>
+<li>LoadBalancer</li>
+</ul>
+<p>Flink Kubernetes Operator 并不干涉 Flink web ui 的功能，用户在通过 Flink Kubernetes Operator 部署 Flink 任务的时候，仍然可以使用上述 3 种方式来访问 Flink web ui。但除此之外，Flink Kubernetes Operator 提供 ingress 配置，可以让用户在未配置外部访问的情况下，访问到 Flink web ui。</p>
+<ol>
+<li>
+<p>安装 nginx ingress</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token comment"># 安装 ingress-nginx</span>
+kubectl apply <span class="token parameter variable">-f</span> https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.0/deploy/static/provider/cloud/deploy.yaml
+
+<span class="token comment"># 检验安装结果</span>
+kubectl get pods <span class="token parameter variable">-n</span> ingress-nginx
+kubectl get services <span class="token parameter variable">-n</span> ingress-nginx</code></pre></div>
+</li>
+<li>
+<p>yaml 增加 ingress 配置</p>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> flink.apache.org/v1beta1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> FlinkDeployment
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> advanced<span class="token punctuation">-</span>ingress
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">image</span><span class="token punctuation">:</span> flink<span class="token punctuation">:</span><span class="token number">1.17</span>
+  <span class="token key atrule">flinkVersion</span><span class="token punctuation">:</span> v1_17
+  <span class="token key atrule">ingress</span><span class="token punctuation">:</span>
+    <span class="token key atrule">template</span><span class="token punctuation">:</span> <span class="token string">&quot;/{{namespace}}/{{name}}(/|$)(.*)&quot;</span>
+    <span class="token key atrule">className</span><span class="token punctuation">:</span> <span class="token string">&quot;nginx&quot;</span>
+    <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+      <span class="token key atrule">nginx.ingress.kubernetes.io/rewrite-target</span><span class="token punctuation">:</span> <span class="token string">&quot;/$2&quot;</span>
+  <span class="token key atrule">flinkConfiguration</span><span class="token punctuation">:</span>
+    <span class="token key atrule">taskmanager.numberOfTaskSlots</span><span class="token punctuation">:</span> <span class="token string">&quot;2&quot;</span>
+  <span class="token key atrule">serviceAccount</span><span class="token punctuation">:</span> flink
+  <span class="token key atrule">jobManager</span><span class="token punctuation">:</span>
+    <span class="token key atrule">resource</span><span class="token punctuation">:</span>
+      <span class="token key atrule">memory</span><span class="token punctuation">:</span> <span class="token string">&quot;1024m&quot;</span>
+      <span class="token key atrule">cpu</span><span class="token punctuation">:</span> <span class="token number">0.1</span>
+  <span class="token key atrule">taskManager</span><span class="token punctuation">:</span>
+    <span class="token key atrule">resource</span><span class="token punctuation">:</span>
+      <span class="token key atrule">memory</span><span class="token punctuation">:</span> <span class="token string">&quot;1024m&quot;</span>
+      <span class="token key atrule">cpu</span><span class="token punctuation">:</span> <span class="token number">0.25</span>
+  <span class="token key atrule">job</span><span class="token punctuation">:</span>
+    <span class="token key atrule">jarURI</span><span class="token punctuation">:</span> local<span class="token punctuation">:</span>///opt/flink/examples/streaming/StateMachineExample.jar
+    <span class="token key atrule">parallelism</span><span class="token punctuation">:</span> <span class="token number">2</span></code></pre></div>
+</li>
+<li>
+<p>部署任务</p>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token comment"># 部署任务</span>
+kubectl apply <span class="token punctuation">-</span>f advanced<span class="token punctuation">-</span>ingress.yaml
+
+<span class="token comment"># 查看任务</span>
+kubectl get FlinkDeployment
+
+kubectl get deployment
+
+kubectl get pods
+
+kubectl get ingress <span class="token punctuation">-</span>A
+kubectl describe ingress $ingress
+
+kubectl get services</code></pre></div>
+</li>
+<li>
+<p>访问任务。<a href="https://localhost/default/advanced-ingress/" target="_self" rel="nofollow">https://localhost/default/advanced-ingress/</a></p>
+</li>
+<li>
+<p>删除任务。</p>
+</li>
+<li>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml">kubectl delete <span class="token punctuation">-</span>f advanced<span class="token punctuation">-</span>ingress.yaml</code></pre></div>
+</li>
+</ol>
 <h2 id="crd" style="position:relative"><a href="#crd" aria-label="crd permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CRD</h2>
 <p>Flink 除了 Standalone，还支持多种资源调度框架如 YARN、Kubernetes。在 Kubernetes 上支持 Application 和 Session 模式。Flink Kubernetes Operator 同时提供在 Kubernetes 上创建 Standalone 集群，以 Application 和 Session 模式原生运行 Flink 的功能。</p>
 <p>Flink Kubernetes Operator 以 CRD 的方式提供云原生配置，分别定义 <code class="language-text">FlinkDeployment</code> 和 <code class="language-text">FlinkSessionJob</code>。</p>
