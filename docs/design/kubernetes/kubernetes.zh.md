@@ -39,6 +39,13 @@ Jar，SQL，SeaTunnel
 
 作业模板，辅助用户快速创建任务，减少用户在通用配置上耗费的时间和精力。
 
+* Kubernetes 配置。
+* 资源配置。CPU & Memory
+* flink 配置
+* log 配置
+* Pod 模板
+* Ingress 配置
+
 ### Deployment
 
 application 提交方式
