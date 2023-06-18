@@ -49,10 +49,10 @@ public enum TemplateMerger {
     ;
 
     public static <T> T merge(T template, T target, Class<T> clazz) {
-        JsonNode targetNode = JacksonUtil.toJsonNode(template);
-        JsonNode patchNode = JacksonUtil.toJsonNode(target);
-        JsonNode patched = doMerge(targetNode, patchNode);
-        return JacksonUtil.toObject(patched, clazz);
+        JsonNode templateNode = JacksonUtil.toJsonNode(template);
+        JsonNode targetNode = JacksonUtil.toJsonNode(target);
+        JsonNode merged = doMerge(templateNode, targetNode);
+        return JacksonUtil.toObject(merged, clazz);
     }
 
     public static JsonNode doMerge(final JsonNode template, final JsonNode target) {
@@ -102,10 +102,10 @@ public enum TemplateMerger {
     ;
 
     public static <T> T merge(T template, T target, Class<T> clazz) {
-        JsonNode targetNode = JacksonUtil.toJsonNode(template);
-        JsonNode patchNode = JacksonUtil.toJsonNode(target);
-        JsonNode patched = doMerge(targetNode, patchNode);
-        return JacksonUtil.toObject(patched, clazz);
+        JsonNode templateNode = JacksonUtil.toJsonNode(template);
+        JsonNode targetNode = JacksonUtil.toJsonNode(target);
+        JsonNode merged = doMerge(templateNode, targetNode);
+        return JacksonUtil.toObject(merged, clazz);
     }
 
     private static JsonNode doMerge(JsonNode source, JsonNode target) {
