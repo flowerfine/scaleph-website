@@ -46,13 +46,13 @@ session job 只支持 2 种形式的 jar uri：
 
 ```shell
 # 编译 scaleph-file-fetcher
-mvn -B -U -T 4 clean package -DskipTests -Dfast -am --projects scaleph-file-fetcher
+mvn -B -U -T 4 clean package -Pdist -DskipTests -Dfast -am --projects scaleph-file-fetcher
 
 # 本地打镜像
 docker build -f tools/docker/build/scaleph-file-fetcher/Dockerfile --tag scaleph-file-fetcher:dev .
 
 # 本地运行调试镜像
-docker run --rm -it scaleph-file-fetcher:dev foo bar
+docker run --rm -it -e MINIO_ENDPOINT="http://10.10.18.163:9000" scaleph-file-fetcher:dev -uri scaleph://scaleph/user/wangqi/cluster/credential/docker/config -path /Users/wangqi/Documents/repository/sliew/scaleph/temp/config
 ```
 
 参考文章
