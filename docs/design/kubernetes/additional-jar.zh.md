@@ -62,6 +62,68 @@ docker run --rm -it -e MINIO_ENDPOINT="http://${ip}:9000" \
 
 - [如何向 Docker 容器传递参数](https://blog.csdn.net/chenxing109/article/details/85319489)
 
+实现效果如下
+
+```yaml
+apiVersion: flink.apache.org/v1beta1
+kind: FlinkDeployment
+metadata:
+  name: pod-template-test
+spec:
+  image: flink:1.17
+  flinkVersion: v1_17
+  flinkConfiguration:
+    taskmanager.numberOfTaskSlots: "2"
+  serviceAccount: flink
+  podTemplate:
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: pod-template
+    spec:
+      containers:
+        # Do not change the main container name
+        - name: flink-main-container
+          volumeMounts:
+            - mountPath: /flink/usrlib
+              name: file-fetcher-volume
+      volumes:
+        - name: file-fetcher-volume
+          emptyDir: {}
+  jobManager:
+    resource:
+      memory: "2048m"
+      cpu: 1
+    podTemplate:
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        name: task-manager-pod-template
+      spec:
+        initContainers:
+          - name: scaleph-file-fetcher
+            image: scaleph-file-fetcher:dev
+            args:
+              - -uri
+              - s3a://scaleph/user/wangqi/job/artifact/jar/test/StateMachineExample.jar
+              - -path
+              - /flink/usrlib/StateMachineExample.jar
+            env:
+              - name: MINIO_ENDPOINT
+                value: http://192.168.1.2:9000
+            volumeMounts:
+              - mountPath: /flink/usrlib
+                name: file-fetcher-volume
+  taskManager:
+    resource:
+      memory: "2048m"
+      cpu: 1
+  job:
+    jarURI: local:///flink/usrlib//StateMachineExample.jar
+    entryClass: org.apache.flink.streaming.examples.statemachine.StateMachineExample
+    parallelism: 2
+```
+
 ### FileSystem
 
 集成 flink FileSystem 和 `scaleph-storage` module。
