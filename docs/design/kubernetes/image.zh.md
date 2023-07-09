@@ -16,6 +16,7 @@ flink 和 flink-kubernetes-operator 默认启用 local FileSystem，不支持 hd
 ## 参数控制
 
 * flink。flink 镜像启动脚本 [docker-entrypoint.sh](https://github.com/apache/flink-docker/blob/master/1.17/scala_2.12-java8-ubuntu/docker-entrypoint.sh) 可以通过环境变量 `ENABLE_BUILT_IN_PLUGINS` 自动启动插件。参考 `copy_plugins_if_required` 方法。
+  * `ENABLE_BUILT_IN_PLUGINS=flink-s3-fs-hadoop`。
 
 ## 定制镜像
 
