@@ -26,6 +26,7 @@ scaleph 对于 flink sql 的支持有 2 种形式：
 cd scaleph-engine/scaleph-sql-template && mvn -B -U clean package -DskipTests -Dfast
 
 # 本地打镜像
+cd -
 docker build \
 	-f tools/docker/build/scaleph-sql-template/Dockerfile \
 	--build-arg FLINK_VERSION=1.17 \
