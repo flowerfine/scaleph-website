@@ -60,11 +60,11 @@
 <ul>
 <li>flink。flink 镜像启动脚本 <a href="https://github.com/apache/flink-docker/blob/master/1.17/scala_2.12-java8-ubuntu/docker-entrypoint.sh" target="_self" rel="nofollow">docker-entrypoint.sh</a> 可以通过环境变量 <code class="language-text">ENABLE_BUILT_IN_PLUGINS</code> 自动启动插件。参考 <code class="language-text">copy_plugins_if_required</code> 方法。
 <ul>
-<li><code class="language-text">ENABLE_BUILT_IN_PLUGINS=flink-s3-fs-hadoop</code>。</li>
+<li><code class="language-text">ENABLE_BUILT_IN_PLUGINS=flink-s3-fs-hadoop-1.17.1.jar</code>。</li>
 </ul>
 </li>
 </ul>
-<h2 id="定制镜像" style="position:relative"><a href="#%E5%AE%9A%E5%88%B6%E9%95%9C%E5%83%8F" aria-label="  定制镜像 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>定制镜像</h2>
+<h2 id="定制镜像" style="position:relative"><a href="#%E5%AE%9A%E5%88%B6%E9%95%9C%E5%83%8F" aria-label="定制镜像 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>定制镜像</h2>
 <p>以 flink 和 flink-kubernetes-operator 镜像为基础镜像，添加新的功能：</p>
 <ul>
 <li>启用文件系统</li>
@@ -73,7 +73,7 @@
 <h3 id="扩展镜像" style="position:relative"><a href="#%E6%89%A9%E5%B1%95%E9%95%9C%E5%83%8F" aria-label="扩展镜像 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>扩展镜像</h3>
 <h4 id="flink" style="position:relative"><a href="#flink" aria-label="flink permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Flink</h4>
 <ul>
-<li>启用文件系统插件。 参考 <a href="https://nightlies.apache.org/flink/flink-docs-release-1.17/docs/deployment/filesystems/overview/" target="_self" rel="nofollow">File Systems</a>
+<li>启用文件系统 插件。参考 <a href="https://nightlies.apache.org/flink/flink-docs-release-1.17/docs/deployment/filesystems/overview/" target="_self" rel="nofollow">File Systems</a>
 <ul>
 <li><a href="https://nightlies.apache.org/flink/flink-docs-release-1.17/docs/deployment/filesystems/s3/" target="_self" rel="nofollow">Amazon S3</a></li>
 <li><a href="https://nightlies.apache.org/flink/flink-docs-release-1.17/docs/deployment/filesystems/oss/" target="_self" rel="nofollow">Aliyun Object Storage Service (OSS)</a></li>

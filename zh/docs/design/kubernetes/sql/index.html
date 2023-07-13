@@ -68,6 +68,7 @@
 <span class="token builtin class-name">cd</span> scaleph-engine/scaleph-sql-template <span class="token operator">&amp;&amp;</span> mvn <span class="token parameter variable">-B</span> <span class="token parameter variable">-U</span> clean package <span class="token parameter variable">-DskipTests</span> <span class="token parameter variable">-Dfast</span>
 
 <span class="token comment"># 本地打镜像</span>
+<span class="token builtin class-name">cd</span> -
 <span class="token function">docker</span> build <span class="token punctuation">\</span>
 	<span class="token parameter variable">-f</span> tools/docker/build/scaleph-sql-template/Dockerfile <span class="token punctuation">\</span>
 	--build-arg <span class="token assign-left variable">FLINK_VERSION</span><span class="token operator">=</span><span class="token number">1.17</span> <span class="token punctuation">\</span>
