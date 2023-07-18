@@ -79,26 +79,36 @@
 <h2 id="能力地图" style="position:relative"><a href="#%E8%83%BD%E5%8A%9B%E5%9C%B0%E5%9B%BE" aria-label="能力地图 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>能力地图</h2>
 <p><code class="language-text">scaleph</code> 始于 2022 年初，一开始的定位在于为 SeaTunnel 开发一个 web 管理系统，实现 SeaTunnel 任务的创建、提交、停止等功能，类似 Datax 和 Datax-web 之类的组合。在数据集成的功能上不断扩展，逐步向相关领域扩展，支持的功能如下：</p>
 <ul>
-<li>项目管理
+<li>
+<p>项目管理</p>
 <ul>
-<li>任务开发。
+<li>
+<p>任务开发。</p>
 <ul>
 <li>Jar 任务管理。上传基于 Flink DataStream API 开发的 jar 包。</li>
 <li>SQL 任务管理、在线开发。在线 Flink SQL 编辑器，基于 SQL Gateway 提供在线调试、运行。</li>
 <li>SeaTunnel 任务管理、拖拉拽在线开发。基于 2.3.1，运行在 Flink 引擎上。</li>
 </ul>
 </li>
-<li>任务运维。
+<li>
+<p>任务运维。</p>
 <ul>
 <li>Flink 管理。提供了 Template -&gt; Session-Cluster、Deployment -&gt; Job 的层级管理。</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>数据源管理。对主流数据源提供管理，支持数据源连接信息的统一管理和共享。</li>
-<li>资源管理。Kubernetes 集群管理</li>
-<li>数据标准。</li>
-<li>后台系统。
+<li>
+<p>数据源管理。对主流数据源提供管理，支持数据源连接信息的统一管理和共享。</p>
+</li>
+<li>
+<p>资源管理。Kubernetes 集群管理</p>
+</li>
+<li>
+<p>数据标准。</p>
+</li>
+<li>
+<p>后台系统。</p>
 <ul>
 <li>数据字典</li>
 <li>权限管理</li>
@@ -122,7 +132,7 @@
 </ul>
 <p>生成 SeaTunnel 配置文件时也会面临多样的参数问题：</p>
 <ul>
-<li>SeaTunnel 的 v2 connector 众多，同一个 connector 中的参数 会存在相互依赖或者互斥现象。case by case 的为每个 v2 connector 实现配置生成功能是一件相当繁琐的事情。</li>
+<li>SeaTunnel 的 v2 connector 众多，同一个 connector 中的参数会存在相互依赖或者互斥现象。case by case 的为每个 v2 connector 实现配置生成功能是一件相当繁琐的事情。</li>
 <li>数据源和 SeaTunnel 任务参数。<code class="language-text">scaleph</code> 的数据源管理模块的信息如何与 SeaTunnel 任务配置生成结合在一起。比如数据源管理的 Jdbc 数据源信息在被 connector 表单中指定时，生成配置如何串联二者？</li>
 <li>SeaTunnel 的参数分为 2 类。任务参数和环境参数，比如 Jdbc 插件，需提供 Jdbc 连接等任务参数，对于 HdfsFile 插件，可以通过参数指定 <code class="language-text">core-site.xml</code> 等配置文件地址。<code class="language-text">scaleph</code> 提供了数据源管理功能，Jdbc 连接和 HdfsFile 的配置文件信息都可以算作数据源信息的一部分，但是二者一个是在配置生成时起效，一个是在任务运行期间起效。</li>
 </ul>
