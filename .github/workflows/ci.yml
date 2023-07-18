@@ -23,5 +23,5 @@ jobs:
           node-version: 18
       - name: build
         run: |
-          yarn
+          SHARP_IGNORE_GLOBAL_LIBVIPS=true yarn
           yarn build

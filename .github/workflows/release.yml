@@ -20,7 +20,7 @@ jobs:
       #   gatsby actions 提供的依赖安装功能不靠谱，进行预先安装
       - name: build
         run: |
-          yarn
+          SHARP_IGNORE_GLOBAL_LIBVIPS=true yarn
       - name: gatsby publish
         uses: enriikke/gatsby-gh-pages-action@v2.2.0
         with:

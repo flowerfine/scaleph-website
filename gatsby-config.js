@@ -38,17 +38,38 @@ module.exports = {
         }
       },
       {
-        slug: "docs/contribute/develop",
-        title: {
-          en: "Develop",
-          zh: "开发文档"
-        }
-      },
-      {
         slug: "docs/design/design",
         title: {
           en: "Design",
           zh: "功能设计"
+        }
+      },
+      {
+        slug: "docs/roadmap/roadmap",
+        title: {
+          en: "Roadmap",
+          zh: "路线图"
+        }
+      },
+      {
+        slug: "docs/contribute/develop",
+        title: {
+          en: "Contribute",
+          zh: "参与贡献"
+        }
+      },
+      {
+        slug: "docs/blog/tree",
+        title: {
+          en: "Blog",
+          zh: "博客"
+        }
+      },
+      {
+        slug: "docs/faq/faq",
+        title: {
+          en: "FAQ",
+          zh: "FAQ"
         }
       }
       /*
