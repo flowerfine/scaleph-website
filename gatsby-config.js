@@ -72,14 +72,6 @@ module.exports = {
           zh: "FAQ"
         }
       }
-      /*
-      {
-        slug: "https://marketplace.opentrs.cn/square",
-        title: {
-          en: "Marketplace",
-          zh: "插件市场"
-        }
-      }*/
     ],
     docs: [
       {
