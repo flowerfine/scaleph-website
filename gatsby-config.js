@@ -75,12 +75,28 @@ module.exports = {
     ],
     docs: [
       {
+        slug: "guide/kubernetes",
+        title: {
+          zh: "Kubernetes",
+          en: "Kubernetes"
+        },
+        order: 2
+      },
+      {
+        slug: "guide/install",
+        title: {
+          zh: "安装",
+          en: "Install"
+        },
+        order: 3
+      },
+      {
         slug: "guide/quick-start",
         title: {
           zh: "快速开始",
           en: "Quick Start"
         },
-        order: 3
+        order: 4
       },
       {
         slug: "design/storage",
