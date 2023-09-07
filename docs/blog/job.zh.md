@@ -18,7 +18,6 @@ order: 5
 - [dolphinscheduler](https://github.com/apache/dolphinscheduler)
 - [hodor](https://github.com/dromara/hodor)
 - [disjob](https://github.com/dromara/disjob)
-- [openjob](https://github.com/open-job/openjob)
 
 ## 技术文档
 
