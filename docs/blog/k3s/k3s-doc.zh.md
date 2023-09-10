@@ -15,7 +15,10 @@ order: 1
 
 ### 官方文档
 
-文档链接：https://docs.k3s.io/zh/
+文档链接：
+
+- https://docs.k3s.io/zh/
+- https://docs.rancher.cn/docs/k3s/_index
 
 ### 边缘计算 k3s 社区（微信公众号）
 
