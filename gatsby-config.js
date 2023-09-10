@@ -113,6 +113,14 @@ module.exports = {
           en: "Flink Kubernetes"
         },
         order: 5
+      },
+      {
+        slug: "blog/k3s",
+        title: {
+          zh: "K3s",
+          en: "K3s"
+        },
+        order: 7
       }
     ],
     showDingTalkQRCode: false,
