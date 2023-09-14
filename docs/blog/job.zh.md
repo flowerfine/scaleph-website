@@ -10,6 +10,9 @@ order: 5
 ## 开源产品
 
 - [quartz](https://github.com/quartz-scheduler/quartz)
+- [ShedLock](https://github.com/lukas-krecan/ShedLock)
+- [db-scheduler](https://github.com/kagkarlsson/db-scheduler)
+- [jobrunr](https://github.com/jobrunr/jobrunr)
 - [elastic-job](https://github.com/apache/shardingsphere-elasticjob)
 - [xxl-job](https://github.com/xuxueli/xxl-job)
 - [PowerJob](https://github.com/PowerJob/PowerJob)
