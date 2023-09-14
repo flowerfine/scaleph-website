@@ -115,6 +115,14 @@ module.exports = {
         order: 5
       },
       {
+        slug: "design/dataservice",
+        title: {
+          zh: "数据服务",
+          en: "Data Service"
+        },
+        order: 6
+      },
+      {
         slug: "blog/k3s",
         title: {
           zh: "K3s",
