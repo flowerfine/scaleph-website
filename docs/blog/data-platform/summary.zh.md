@@ -15,3 +15,4 @@ order: 1
 * [字节跳动开源 ByConity：基于 ClickHouse 的存算分离架构云原生数仓](https://www.infoq.cn/article/vkvhbbzq1obto3wf76sf)
 * [【开源】数据标准管理平台](https://mp.weixin.qq.com/s/6HgjCxNVJFe5ZnrZ5Fpn3Q)
 * [Hadoop on k8s 快速部署进阶精简篇](https://mp.weixin.qq.com/s/w95RvgwBiMYARRWtu1WFAA)
+* [大数据服务上k8s主要是为了什么？](https://mp.weixin.qq.com/s/Oezinimi5-UO6MB0ygvEbQ)

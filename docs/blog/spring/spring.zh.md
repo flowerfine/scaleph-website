@@ -33,6 +33,8 @@ spring、spring-boot、spring-cloud 文章总结
 * [@GrpcService使用注解在 Spring Boot 中开始使用 gRPC](https://mp.weixin.qq.com/s/8xNbB8a_dYb5MFunjp_AJQ)
 * [敏感数据的保护伞——SpringBoot集成jasypt](https://mp.weixin.qq.com/s/OvaGRkXH6Nb3ctxmbCPeNg)
 * [Hutool：一行代码搞定数据脱敏](https://mp.weixin.qq.com/s/hobcdmDDm_O4TD9cncqeMg)
+* [Springboot整合Hutool自定义注解实现数据脱敏](https://mp.weixin.qq.com/s/9OYDfjVA6bDeZ8hK2z8H3w)
+* [MyBatis拦截器优雅实现数据脱敏](https://mp.weixin.qq.com/s/59TgeQoRxLuOEDpyzgfmTw)
 * [Spring Boot 快速实现 IP 地址解析](https://mp.weixin.qq.com/s/5h3OIa-ggg4y3Jo0d3UQ0Q)
 
 ## Spring Security

@@ -179,6 +179,14 @@ module.exports = {
         order: 7
       },
       {
+        slug: "blog/sql",
+        title: {
+          zh: "SQL",
+          en: "SQL"
+        },
+        order: 8
+      },
+      {
         slug: "blog/archive",
         title: {
           zh: "归档",
