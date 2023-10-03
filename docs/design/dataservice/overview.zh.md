@@ -11,6 +11,7 @@ order: 1
 
 * [性能、安全和稳定，DataAPI 为企业 API 保驾护航](https://mp.weixin.qq.com/s/GsMJvRdm5VBJMQbP1EmUCg)
 * [快手统一数据服务平台设计与实践](https://mp.weixin.qq.com/s/ciepxnqmJLgaCVKKzJJOtw)
+* [自定义API接口在Knife4j的Ui界面中显示](https://mp.weixin.qq.com/s/GWpZpZWswaQAjRRHlrw_Hg)。自定义接口如何通过 swagger 展示，可以参考这篇文章
 
 ## 数据服务介绍
 

@@ -4,6 +4,7 @@ public
 src/gatsby-types.d.ts
 
 yarn.lock
+yarn-error.log
 
 .idea
 .DS_Store
