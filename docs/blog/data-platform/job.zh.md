@@ -2,7 +2,7 @@
 id: job
 title: Job Schedule
 slug: job
-order: 1
+order: 2
 ---
 
 调度系统相关资料
@@ -31,3 +31,4 @@ order: 1
 - [异步任务处理系统，如何解决业务长耗时、高并发难题？](https://mp.weixin.qq.com/s/Bwj8V6kFWfXwGiKS-E2pHA)
 - [快速实现一个分布式定时器](https://mp.weixin.qq.com/s/ggPftQm2ewGOJwlRDQGgDQ)
 - [Spring Boot 实现定时任务的 4 种方式](https://mp.weixin.qq.com/s/iWK70k1KgHLKG9cvIlELbg)
+- [DAG流图自动排列布局的实现](https://mp.weixin.qq.com/s/tsmNFpABJAxAItVzPqluWw)。前端页面如何实现 DAG 自动排列的一篇文章

@@ -2,7 +2,7 @@
 id: bi
 title: BI
 slug: bi
-order: 2
+order: 3
 ---
 
 BI
