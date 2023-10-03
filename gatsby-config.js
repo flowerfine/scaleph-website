@@ -59,7 +59,7 @@ module.exports = {
         }
       },
       {
-        slug: "docs/blog/tree",
+        slug: "docs/blog/overview",
         title: {
           en: "Blog",
           zh: "博客"
@@ -128,7 +128,7 @@ module.exports = {
           zh: "程序设计",
           en: "Program Design"
         },
-        order: 1
+        order: 2
       },
       {
         slug: "blog/test",
@@ -136,7 +136,8 @@ module.exports = {
           zh: "测试",
           en: "Test"
         },
-        order: 2
+        open: false,
+        order: 3
       },
       {
         slug: "blog/container",
@@ -144,7 +145,7 @@ module.exports = {
           zh: "容器",
           en: "Container"
         },
-        order: 3
+        order: 4
       },
       {
         slug: "blog/spring",
@@ -152,7 +153,7 @@ module.exports = {
           zh: "Spring",
           en: "Spring"
         },
-        order: 4
+        order: 5
       },
       {
         slug: "blog/flink",
@@ -160,7 +161,7 @@ module.exports = {
           zh: "Flink",
           en: "Flink"
         },
-        order: 5
+        order: 6
       },
       {
         slug: "blog/devops",
@@ -168,7 +169,7 @@ module.exports = {
           zh: "DevOps",
           en: "DevOps"
         },
-        order: 6
+        order: 7
       },
       {
         slug: "blog/data-platform",
@@ -176,7 +177,7 @@ module.exports = {
           zh: "数据中台",
           en: "Data Platform"
         },
-        order: 7
+        order: 8
       },
       {
         slug: "blog/sql",
@@ -184,15 +185,15 @@ module.exports = {
           zh: "SQL",
           en: "SQL"
         },
-        order: 8
+        order: 9
       },
       {
         slug: "blog/archive",
         title: {
-          zh: "归档",
+          zh: "归档文档",
           en: "Archive"
         },
-        order: 8
+        order: 10
       }
     ],
     showDingTalkQRCode: false,
