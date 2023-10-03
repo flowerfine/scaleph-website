@@ -2,7 +2,7 @@
 id: minikube
 title: Minikube
 slug: minikube
-order: 6
+order: 2
 ---
 
 ## Minikube

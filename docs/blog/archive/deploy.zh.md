@@ -2,7 +2,7 @@
 id: deploy
 title: 部署
 slug: deploy
-order: 2
+order: 1
 ---
 
 `scaleph` 产出为镜像，部署方式以 docker 为主。同时，Scaleph 也提供了安装包的方式用来在内网环境中进行部署。

@@ -2,7 +2,7 @@
 id: k3s-doc
 title: 文档汇总
 slug: k3s-doc
-order: 1
+order: 3
 ---
 
 ## 开源项目

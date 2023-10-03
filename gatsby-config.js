@@ -123,12 +123,52 @@ module.exports = {
         order: 6
       },
       {
-        slug: "blog/k3s",
+        slug: "blog/program-design",
         title: {
-          zh: "K3s",
-          en: "K3s"
+          zh: "程序设计",
+          en: "Program Design"
         },
-        order: 7
+        order: 1
+      },
+      {
+        slug: "blog/test",
+        title: {
+          zh: "测试",
+          en: "Test"
+        },
+        order: 2
+      },
+      {
+        slug: "blog/container",
+        title: {
+          zh: "容器",
+          en: "Container"
+        },
+        order: 3
+      },
+      {
+        slug: "blog/spring",
+        title: {
+          zh: "Spring",
+          en: "Spring"
+        },
+        order: 4
+      },
+      {
+        slug: "blog/flink",
+        title: {
+          zh: "Flink",
+          en: "Flink"
+        },
+        order: 5
+      },
+      {
+        slug: "blog/archive",
+        title: {
+          zh: "归档",
+          en: "Archive"
+        },
+        order: 6
       }
     ],
     showDingTalkQRCode: false,

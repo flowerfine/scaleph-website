@@ -2,7 +2,7 @@
 id: json-diff
 title: Json Diff&Merge
 slug: json-diff
-order: 4
+order: 2
 ---
 
 Json 的 diff 和 merge 功能实现

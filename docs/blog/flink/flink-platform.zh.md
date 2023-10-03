@@ -2,7 +2,7 @@
 id: flink-platform
 title: Flink Platform
 slug: flink-platform
-order: 3
+order: 1
 ---
 
 本文介绍分享优秀的 Flink 实时计算平台项目或者建设平台的优秀文章

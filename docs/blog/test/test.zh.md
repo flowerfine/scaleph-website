@@ -2,7 +2,7 @@
 id: test
 title: 测试
 slug: test
-order: 10
+order: 1
 ---
 
 测试文章总结
