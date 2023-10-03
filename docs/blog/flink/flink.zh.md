@@ -99,6 +99,7 @@ join 的分类
 * [Flink 双流Join中，Window Join的实现原理是什么？](https://mp.weixin.qq.com/s/ziMoUUVUca0qQShomziaUQ)
 * [Flink 双流Join中，Interval Join的实现原理是什么？](https://mp.weixin.qq.com/s/DIRP0xLPMDdT3Lu1E2qnEA)
 * [一个案例彻底掌握Window Join[附详细代码]](https://mp.weixin.qq.com/s/N2DAZb0b8gIdygZUZROkZg)
+* [Flink Table Store 0.3 构建流式数仓最佳实践](https://flink-learning.org.cn/article/detail/73fa0115d226c7f496240f180736b884?spm=a2csy.flink.0.0.49495badC4blix&name=article&tab=suoyou&page=7)。对 Flink 的多种 join 有一个介绍
 * [Flink流计算常用算子之Union使用方法及代码演示](https://mp.weixin.qq.com/s/svXRgBHtgnSH0EWVBCdiUQ)
 * [Flink中如何使用Connect实现两个数据流合并？](https://mp.weixin.qq.com/s/jUNpytO2EGSaI0FfSSYTEQ)
 * [Flink数据分流：split、select和Side Outputs](https://mp.weixin.qq.com/s/Rb7R5fO_C6HmjiTElaPrww)
