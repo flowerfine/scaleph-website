@@ -2,7 +2,7 @@
 id: flink-platform
 title: Flink Platform
 slug: flink-platform
-order: 1
+order: 2
 ---
 
 本文介绍分享优秀的 Flink 实时计算平台项目或者建设平台的优秀文章
@@ -30,4 +30,3 @@ order: 1
 - [Flink on K8S 在网易传媒的落地实践](https://mp.weixin.qq.com/s/nbKz1aAZChTPGFMp80ERNA)
 - [揭秘阿里云 Flink 智能诊断利器——Fllink Job Advisor](https://mp.weixin.qq.com/s/OqqRG0yjfIwoJU-SjaFQHA)
 - [Ververica Platform-阿里巴巴全新 Flink 企业版揭秘](https://zhuanlan.zhihu.com/p/89616731)
-- [因为不懂 Flink on K8S 类加载机制，引发了线上事故。(建议收藏)](https://mp.weixin.qq.com/s/H4H_g3s_7BhodnfKcxiT1g)

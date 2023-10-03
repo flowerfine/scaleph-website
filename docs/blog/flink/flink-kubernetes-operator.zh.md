@@ -2,7 +2,7 @@
 id: flink-kubernetes-operator
 title: Flink Kubernetes Operator
 slug: flink-kubernetes-operator
-order: 2
+order: 3
 ---
 
 Flink Kubernetes Operator 使用 Kubernetes API，提供云原生管理 Flink 集群的能力：

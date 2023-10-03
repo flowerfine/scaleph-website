@@ -2,7 +2,7 @@
 id: flink-sql-gateway
 title: Flink SQL Gateway
 slug: flink-sql-gateway
-order: 3
+order: 4
 ---
 
 Flink SQL Gateway 介绍
