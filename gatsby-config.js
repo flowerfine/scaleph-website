@@ -163,12 +163,28 @@ module.exports = {
         order: 5
       },
       {
+        slug: "blog/devops",
+        title: {
+          zh: "DevOps",
+          en: "DevOps"
+        },
+        order: 6
+      },
+      {
+        slug: "blog/data-platform",
+        title: {
+          zh: "数据中台",
+          en: "Data Platform"
+        },
+        order: 7
+      },
+      {
         slug: "blog/archive",
         title: {
           zh: "归档",
           en: "Archive"
         },
-        order: 6
+        order: 8
       }
     ],
     showDingTalkQRCode: false,
